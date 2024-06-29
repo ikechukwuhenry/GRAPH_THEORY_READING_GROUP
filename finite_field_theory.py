@@ -42,16 +42,3 @@ isFiniteField(finite_field)
 
 # Finite Field of 9 integer element is not a finite field 
 isFiniteField(finite_field2)
-
-"""
-# create a finite field with p number of elements
-p = 9
-a = b = np.arange(1, p)
-
-# find the outer products of these 2 sets of elements
-outer_product = np.outer(a, b)
-
-# find the mod of each to check if each element has a multiplicative inverse
-ans = outer_product % p
-print(ans)
-"""
