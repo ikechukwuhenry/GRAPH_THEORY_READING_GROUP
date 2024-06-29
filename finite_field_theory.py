@@ -19,13 +19,29 @@ def multiply_finite_field(p):
 
 
 # Multiply finite field of 5 elements
-multiply_finite_field(5)
+finite_field = multiply_finite_field(5)
 
 # multiply finite field of 9 elements
 # Looking closely we discover we cant user integers for finite field of 9 elements
 # because elements 3 and 6 do not have multiplicative inverse
-multiply_finite_field(9)
+finite_field2 = multiply_finite_field(9)
 
+def isFiniteField(field):
+    for row in field:
+        if 1 not in row:
+            print("not an integer finite field")
+            return False
+    print("is a finite field")
+    return True
+
+
+
+# Testing
+# Finite Field of 5 element is a finite field
+isFiniteField(finite_field)
+
+# Finite Field of 9 integer element is not a finite field 
+isFiniteField(finite_field2)
 
 """
 # create a finite field with p number of elements
